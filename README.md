@@ -10,6 +10,7 @@ This directory contains an example predicted output and an example ground truth 
 -----
   * [Poly Haven and Laval indoor](#Poly-Haven-and-Laval-Indoor)
   * [Array of spheres](#Array-of-spheres)
+  * [Directional Error](#Directional-Error)
   * [Installation](#Installation)
   * [Citation](#Citation)
 ------
@@ -37,6 +38,18 @@ python res1_table.py --input_dir ../output/editableindoor/hdr --output_dir ../ou
 ```
 
 The score will be printed to the terminal and saved to a CSV file at   `../output/editableindoor`
+
+### Directional Error 
+
+
+```shell
+cd envmapnet
+python compute_directional_error.py --input_dir ../example/hdr/envmapnet/ --gt_dir ../example/ground_truth/envmapnet/ --output_dir ../output/envmapnet 
+```
+
+The directional (angular) error is taken from [EnvMapNet](https://github.com/apple/ml-envmapnet)
+
+The directional error will be printed to the terminal and saved to a text file at `../output/envmapnet` in the degree unit and also produce csv file in radiant unit
 
 ## Installation
 ### 1. Python environment setup 
